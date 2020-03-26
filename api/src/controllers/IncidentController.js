@@ -39,9 +39,9 @@ module.exports = {
             const incident = {...data, 
                                 ong_id: logged_ong};
 
-            const [id] = await connection('incidents').insert(incident);
+            await connection('incidents').insert(incident);
 
-            return res.json({id});
+            return res.status(204).send();
 
         } catch (error) {
             return res.status(400).json(error);

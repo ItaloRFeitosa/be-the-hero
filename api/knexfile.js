@@ -2,18 +2,16 @@
 const config = require('./config')
 module.exports = {
 
-  // development: {
-  //   client: 'sqlite3',
-  //   connection: {
-  //     filename: './src/database/db.sqlite3'
-  //   },
-  //   migrations: {
-  //     directory: './src/database/migrations'
-  //   },
-  //   useNullAsDefault: true
-  // },
+  development: {
+    client: 'pg',
+    connection: config.postgres_dev,
+    migrations: {
+      directory: './src/database/migrations'
+    },
+    useNullAsDefault: true
+  },
 
-  teste: {
+  staging: {
     client: 'pg',
     connection: config.postgres_container,
     migrations: {
