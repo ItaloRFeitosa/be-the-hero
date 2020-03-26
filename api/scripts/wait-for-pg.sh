@@ -9,5 +9,10 @@ until PGPASSWORD=$POSTGRES_PASSWORD psql -h $POSTGRES_HOST -U $POSTGRES_USER -c 
 done
 
 >&2 echo "Postgres is up - executing command"
-npm run migrate
+
+if $KNEX_MIGRATE; then
+  >&2 echo "Running migration ..."
+  npm run migrate
+fi
+
 npm run start
