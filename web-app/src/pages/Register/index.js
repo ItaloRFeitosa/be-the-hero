@@ -37,6 +37,8 @@ export default function Register(){
             history.push(`/?id=${response.data.id}`);
         } catch (error) {
             alert('Erro, tente novamente!')
+            console.log(error);
+            
         }
         
     }

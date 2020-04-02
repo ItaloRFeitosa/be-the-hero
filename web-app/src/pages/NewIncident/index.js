@@ -34,6 +34,7 @@ export default function NewIncident(){
             history.push('/profile');
         } catch (error) {
             alert('Erro, tente novamente!')
+            
         }
         
     }

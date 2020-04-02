@@ -5,7 +5,7 @@ module.exports = {
         },
 
         staging:{
-            baseURL: 'http://api:3333/api/v1'
+            baseURL: 'http://localhost:3333/api/v1'
         }
     }
 }
